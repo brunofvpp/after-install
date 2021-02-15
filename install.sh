@@ -83,7 +83,9 @@ sudo apt-get update > /dev/null 2>&1
 sudo apt-get install sublime-text > /dev/null 2>&1
 
 echo "     > docker"
-sudo apt-get remove docker docker-engine docker.io containerd runc > /dev/null 2>&1
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - > /dev/null 2>&1
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable" > /dev/null 2>&1
+sudo apt-get install docker-ce docker-ce-cli containerd.io > /dev/null 2>&1
 
 echo "     > docker-compose"
 sudo curl -L "https://github.com/docker/compose/releases/download/1.28.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose > /dev/null 2>&1 2>&1
