@@ -22,7 +22,7 @@ sudo apt-get dist-upgrade -y > /dev/null 2>&1
 echo "### Instalando pacotes"
 
 echo "     > Ensencial"
-sudo apt install -y git curl virtualenv zsh python-pip software-properties-common apt-transport-https wget zip unzip unrar libutempter0 > /dev/null 2>&1
+sudo apt install -y git curl virtualenv zsh python-pip software-properties-common apt-transport-https wget zip unzip unrar libutempter0 python3-venv > /dev/null 2>&1
 
 echo "     > Baixando arquivos .deb"
 cd /tmp
